@@ -64,7 +64,7 @@ System.out.println("====== Задание №2 ======");
  // начало задания №4   
  System.out.println("====== Задание №4 ======");  
  int w;
- w=6;
+ w=114;
 //рассматриваем частные начальные случаи 
  if (w==1){
      System.out.println("Сумма: "+w+" рубль");
@@ -104,5 +104,31 @@ System.out.println("====== Задание №2 ======");
          String newNewMyStr=newMyStr.replace("#","");
          System.out.println(newNewMyStr);
          // конец задания №5 
+
+//исправленное задание 
+System.out.println("====== Задание №4 (идея найдена на просторах интернета======");
+String word;
+String words[]={"рубль", "рубля", "рублей"};
+int num=12569;
+int getNum=num;
+num=num%100;
+if(num>19){num=num%10;}
+switch(num){
+    case 1: { word=words[0];
+            System.out.println("Сумма "+getNum+" "+word);
+            break;
+                }
+    case 2: case 3: case 4: {word=words[1];
+            System.out.println("Сумма "+getNum+" "+word);    
+            break;
+                }
+    default: {word=words[2];
+            System.out.println("Сумма "+getNum+" "+word);    
+            break;
+                }
+    
+}
+
+
     }
 }
