@@ -171,6 +171,9 @@ public class NewBankomat {
                 System.out.println("100$ -- " + give100);
                 System.out.println("50$ -- " + give50);
                 System.out.println("20$ -- " + give20);
+                give20 = 0;
+                give50 = 0;
+                give100 = 0;
             } else {
                 trigger = false;
                 System.out.println("Выдать деньги не сможем");
