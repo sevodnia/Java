@@ -1,8 +1,18 @@
 package upgradedbankomat;
 
-import java.util.Scanner;
-
 public class NewBankomat {
+
+    NewBankomat newBankomat;
+    AddMoneyInterface addmon;
+    ShowMoneyInterface showmon;
+
+    public void setAddmon(AddMoneyInterface addmon) {
+        this.addmon = addmon;
+    }
+
+    public void setShowmon(ShowMoneyInterface showmon) {
+        this.showmon = showmon;
+    }
 
     private int number20;
     private int number50;
@@ -45,36 +55,12 @@ public class NewBankomat {
         this.number100 = number100;
     }
 
-    public NewBankomat addMoney(NewBankomat newBankomat) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("====Загружаем деньги=====");
-        System.out.println("Введите кол-во 20");
-        newBankomat.setNumber20(sc.nextInt() + getNumber20());
-        System.out.println("Введите кол-во 50");
-        newBankomat.setNumber50(sc.nextInt() + getNumber50());
-        System.out.println("Введите кол-во 100");
-        newBankomat.setNumber100(sc.nextInt() + getNumber100());
-
-        return newBankomat;
-    }
-
-    public void showMoney(NewBankomat newBankomat) {
-        System.out.println("====В банкомате загружены деньги=====");
-        System.out.print("Кол-во 20 - ");
-        System.out.println(getNumber20());
-        System.out.print("Кол-во 50 - ");
-        System.out.println(getNumber50());
-        System.out.print("Кол-во 100 - ");
-        System.out.println(getNumber100());
-
-    }
-
     public void getMoney(int sum) {
         trigger = true;
-        int start20 = getNumber20();
-        int start50 = getNumber50();
-        int start100 = getNumber100();
-
+        int start20=getNumber20();
+        int start50=getNumber50();
+        int start100=getNumber100();
+        
         while (trigger) {
 
             if (sum > 0) {
@@ -178,6 +164,7 @@ public class NewBankomat {
                 give20 = 0;
                 give50 = 0;
                 give100 = 0;
+
             } else {
                 trigger = false;
                 System.out.println("Выдать деньги не сможем");
@@ -187,6 +174,7 @@ public class NewBankomat {
                 setNumber20(start20);
                 setNumber50(start50);
                 setNumber100(start100);
+
             }
 
         }
