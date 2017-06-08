@@ -1,17 +1,24 @@
 package upgradedbankomat;
 
+import java.util.Scanner;
+
 public class NewBankomat {
 
-    NewBankomat newBankomat;
-    AddMoneyInterface addmon;
-    ShowMoneyInterface showmon;
+    OnBankomatListener listener;
 
-    public void setAddmon(AddMoneyInterface addmon) {
-        this.addmon = addmon;
+    public void setListener(OnBankomatListener listener) {
+        this.listener = listener;
     }
 
-    public void setShowmon(ShowMoneyInterface showmon) {
-        this.showmon = showmon;
+    //булевая переменная для обработки и запуска метода интерфейса
+    private boolean check = true;
+
+    public boolean isCheck() {
+        return check;
+    }
+
+    public void setCheck(boolean check) {
+        this.check = check;
     }
 
     private int number20;
@@ -56,11 +63,12 @@ public class NewBankomat {
     }
 
     public void getMoney(int sum) {
+        listener.showProgressBar();
         trigger = true;
-        int start20=getNumber20();
-        int start50=getNumber50();
-        int start100=getNumber100();
-        
+        int start20 = getNumber20();
+        int start50 = getNumber50();
+        int start100 = getNumber100();
+
         while (trigger) {
 
             if (sum > 0) {
@@ -84,6 +92,8 @@ public class NewBankomat {
                                 setNumber20(getNumber20() - 1);
                                 sum = sum - 20;
                             } else {
+                                setCheck(false);
+                                listener.operationComplited(this);
                                 System.out.println("Не можем выдать указанную сумму");
                                 trigger = false;
                                 give20 = 0;
@@ -107,7 +117,8 @@ public class NewBankomat {
                                 sum = sum - 20;
 
                             } else {
-
+                                setCheck(false);
+                                listener.operationComplited(this);
                                 System.out.println("Не можем выдать указанную сумму");
                                 trigger = false;
                                 give20 = 0;
@@ -124,7 +135,8 @@ public class NewBankomat {
                                 sum = sum - 50;
 
                             } else {
-
+                                setCheck(false);
+                                listener.operationComplited(this);
                                 System.out.println("Не можем выдать указанную сумму");
                                 trigger = false;
                                 give20 = 0;
@@ -142,7 +154,8 @@ public class NewBankomat {
                             sum = sum - 20;
 
                         } else {
-
+                            setCheck(false);
+                            listener.operationComplited(this);
                             System.out.println("Не можем выдать указанную сумму");
                             trigger = false;
                             give20 = 0;
@@ -156,6 +169,8 @@ public class NewBankomat {
                 }
 
             } else if (sum == 0) {
+                setCheck(true);
+                listener.operationComplited(this);
                 trigger = false;
                 System.out.println("=====Возмите ваши деньги====");
                 System.out.println("100$ -- " + give100);
@@ -166,6 +181,8 @@ public class NewBankomat {
                 give100 = 0;
 
             } else {
+                setCheck(false);
+                listener.operationComplited(this);
                 trigger = false;
                 System.out.println("Выдать деньги не сможем");
                 give20 = 0;
@@ -185,4 +202,28 @@ public class NewBankomat {
 
     }
 
+    public void addMoney() {
+        listener.showProgressBar();
+        Scanner sc = new Scanner(System.in);
+        System.out.println("====Загружаем деньги=====");
+        System.out.println("Введите кол-во 20");
+        setNumber20(sc.nextInt() + getNumber20());
+        System.out.println("Введите кол-во 50");
+        setNumber50(sc.nextInt() + getNumber50());
+        System.out.println("Введите кол-во 100");
+        setNumber100(sc.nextInt() + getNumber100());
+
+    }
+
+    public void showMoney() {
+        listener.showProgressBar();
+        System.out.println("====В банкомате загружены деньги=====");
+        System.out.print("Кол-во 20 - ");
+        System.out.println(getNumber20());
+        System.out.print("Кол-во 50 - ");
+        System.out.println(getNumber50());
+        System.out.print("Кол-во 100 - ");
+        System.out.println(getNumber100());
+
+    }
 }
