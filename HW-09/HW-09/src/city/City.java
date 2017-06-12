@@ -2,6 +2,10 @@ package city;
 
 public class City {
 
+    private String cityName;
+    private int numberOfPeople;
+    private String country;
+
     public void setCityName(String cityName) {
         this.cityName = cityName;
     }
@@ -14,10 +18,6 @@ public class City {
         this.country = country;
     }
 
-    private String cityName;
-    private int numberOfPeople;
-    private String country;
-
     public void show() {
 
         System.out.println("Город " + cityName + "\n" + "Количество жителей " + numberOfPeople + "\n" + "Страна " + country);
@@ -29,10 +29,10 @@ public class City {
 
         public String squareName;
 
-        public String show(String b){
-        
-            b = "Главная площадь "+squareName;
-        return b;
+        public String show(String b) {
+
+            b = "Главная площадь " + squareName;
+            return b;
         }
     }
 //Вложенный класс УЛИЦА
@@ -44,10 +44,11 @@ public class City {
         public Street(String streetName) {
             this.streetName = streetName;
         }
-        public void show(){
-        
-            System.out.println("Главная улица "+streetName);
-        
+
+        public void show() {
+
+            System.out.println("Главная улица " + streetName);
+
         }
     }
 //Вложенный класс РЕКА
@@ -59,11 +60,11 @@ public class City {
         public River(String riverName) {
             this.riverName = riverName;
         }
-        
-                public void show(){
-        
-            System.out.println("Главная река "+riverName);
-        
+
+        public void show() {
+
+            System.out.println("Главная река " + riverName);
+
         }
     }
 
