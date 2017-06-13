@@ -1,0 +1,3 @@
+VLADIMIR|28|true
+STUDENT|26|true
+WOMAN|28|true
