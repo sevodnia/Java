@@ -8,7 +8,7 @@ import org.xml.sax.helpers.DefaultHandler;
 public class Handler extends DefaultHandler {
 
     ArrayList<People> array = new ArrayList<>();
-    People people = new People();
+    People people;
     private String thisElement;
 
     @Override
@@ -38,6 +38,10 @@ public class Handler extends DefaultHandler {
 
     @Override
     public void characters(char[] ch, int start, int end) {
+        if (thisElement.equals("element")) {
+            people = new People();
+
+        }
 
         if (thisElement.equals("age")) {
             people.setAge(new Integer(new String(ch, start, end)));
@@ -50,13 +54,16 @@ public class Handler extends DefaultHandler {
             people.setIsDegree(Boolean.parseBoolean(new String(ch, start, end)));
         }
         if (thisElement.equals("name")) {
-            people.setName(new String(ch, start, end));
+
+            if (people == null) {
+            } else {
+                people.setName(new String(ch, start, end));
+            }
 
         }
         if (thisElement.equals("surname")) {
             people.setSurname(new String(ch, start, end));
-
-
+            array.add(people);
         }
 
     }
