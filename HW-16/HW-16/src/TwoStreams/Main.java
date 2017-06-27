@@ -1,17 +1,25 @@
 package TwoStreams;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
-
+        
+        Scanner scan = new Scanner(System.in);
+        String str = "start";
+        System.out.println("Type \"start\" to start: ");
+        
+        if(str.equals(scan.nextLine())){
         Stream streamOne = new Stream();
         streamOne.setName("Thread 1:");
         streamOne.start();
         Stream streamTwo = new Stream();
         streamTwo.setName("Thread 2:");
         streamTwo.start();
-        // print10(streamTwo);
-    }
+        }
+        else{System.out.println("Incorrect.");}
+        }
 
     public synchronized static void print10(Stream stream) {
         int number = 0;
