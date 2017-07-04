@@ -1,0 +1,101 @@
+{
+  "name": "Students",
+  "location": "BSUIR",
+  "students": [
+      {
+        "id": 0,
+        "name": "Ivan Ivanov",
+        "degree": "FTT",
+        "dateOfBirth": "2004-10-25",
+        "rating": [
+    		  20,
+     		  10,
+     		  90,
+     		  40,
+     		  45,
+     		  76,
+     		  90,
+     		  34,
+     		  78,
+     		  60
+         ],
+         "visible": true
+      },
+      {
+        "id": 1,
+        "name": "Alex Petrov",
+        "degree": "PPP",
+        "dateOfBirth": "1998-03-24",
+        "rating": [
+    		  0,
+     		  4,
+     		  20,
+     		  30,
+     		  10,
+     		  40,
+     		  34,
+     		  37,
+     		  55,
+     		  20
+         ],
+         "visible": true
+      },
+      {
+        "id": 2,
+        "name": "Elena Sergeevna",
+        "degree": "FTT",
+        "dateOfBirth": "1999-05-02",
+        "rating": [
+    		  52,
+     		  36,
+     		  95,
+     		  23,
+     		  13,
+     		  78,
+     		  23,
+     		  90,
+     		  100,
+     		  45
+         ],
+         "visible": true
+      },
+      {
+        "id": 3,
+        "name": "Olga Hlkdkfjj",
+        "degree": "FTT",
+        "dateOfBirth": "1995-12-10",
+        "rating": [
+    		  4,
+     		  45,
+     		  87,
+     		  89,
+     		  39,
+     		  15,
+     		  34,
+     		  56,
+     		  87,
+     		  56
+         ],
+         "visible": true
+      },
+            {
+        "id": 4,
+        "name": "Sergei Dfsdkjd",
+        "degree": "PPP",
+        "dateOfBirth": "2005-05-04",
+        "rating": [
+    		  65,
+     		  10,
+     		  90,
+     		  87,
+     		  45,
+     		  76,
+     		  100,
+     		  34,
+     		  67,
+     		  60
+         ],
+         "visible": true
+      }
+    ]
+}
