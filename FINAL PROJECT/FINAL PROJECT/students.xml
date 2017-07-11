@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+	<name>Students</name>
+	<location>BSUIR</location>
+	<students>
+		<id>0</id>
+		<name>Ivan Ivanov</name>
+		<degree>FTT</degree>
+		<dateOfBirth>2004-10-25</dateOfBirth>
+		<rating>20</rating>
+		<rating>10</rating>
+		<rating>90</rating>
+		<rating>40</rating>
+		<rating>45</rating>
+		<rating>76</rating>
+		<rating>90</rating>
+		<rating>34</rating>
+		<rating>78</rating>
+		<rating>60</rating>
+		<visible>true</visible>
+	</students>
+	<students>
+		<id>1</id>
+		<name>Alex Petrov</name>
+		<degree>PPP</degree>
+		<dateOfBirth>1998-03-24</dateOfBirth>
+		<rating>0</rating>
+		<rating>4</rating>
+		<rating>20</rating>
+		<rating>30</rating>
+		<rating>10</rating>
+		<rating>40</rating>
+		<rating>34</rating>
+		<rating>37</rating>
+		<rating>55</rating>
+		<rating>20</rating>
+		<visible>true</visible>
+	</students>
+	<students>
+		<id>2</id>
+		<name>Elena Sergeevna</name>
+		<degree>FTT</degree>
+		<dateOfBirth>1999-05-02</dateOfBirth>
+		<rating>52</rating>
+		<rating>36</rating>
+		<rating>95</rating>
+		<rating>23</rating>
+		<rating>13</rating>
+		<rating>78</rating>
+		<rating>23</rating>
+		<rating>90</rating>
+		<rating>100</rating>
+		<rating>45</rating>
+		<visible>true</visible>
+	</students>
+	<students>
+		<id>3</id>
+		<name>Olga Hlkdkfjj</name>
+		<degree>FTT</degree>
+		<dateOfBirth>1995-12-10</dateOfBirth>
+		<rating>4</rating>
+		<rating>45</rating>
+		<rating>87</rating>
+		<rating>89</rating>
+		<rating>39</rating>
+		<rating>15</rating>
+		<rating>34</rating>
+		<rating>56</rating>
+		<rating>87</rating>
+		<rating>56</rating>
+		<visible>true</visible>
+	</students>
+	<students>
+		<id>4</id>
+		<name>Sergei Dfsdkjd</name>
+		<degree>PPP</degree>
+		<dateOfBirth>2005-05-04</dateOfBirth>
+		<rating>65</rating>
+		<rating>10</rating>
+		<rating>90</rating>
+		<rating>87</rating>
+		<rating>45</rating>
+		<rating>76</rating>
+		<rating>100</rating>
+		<rating>34</rating>
+		<rating>67</rating>
+		<rating>60</rating>
+		<visible>true</visible>
+	</students>
+</root>
