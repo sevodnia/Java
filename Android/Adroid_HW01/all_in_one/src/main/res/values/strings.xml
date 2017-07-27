@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">HomeWork01</string>
+    <string name="text_no1">Здесь выводится текст один</string>
+    <string name="text_no2">Здесь выводится текст два</string>
+    <string name="text_on_button">Поменять местами</string>
+    <string name="text_on_button_no2">replace all</string>
+
+
+    <!--Class work 02 -->
+    <string name="classwork2_name">Name</string>
+    <string name="classwork2_login">Login</string>
+
+
+</resources>

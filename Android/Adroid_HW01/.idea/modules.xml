@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Adroid_HW01.iml" filepath="$PROJECT_DIR$/Adroid_HW01.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/all_in_one/all_in_one.iml" filepath="$PROJECT_DIR$/all_in_one/all_in_one.iml" />
     </modules>
   </component>
 </project>

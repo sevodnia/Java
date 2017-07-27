@@ -1,8 +1,0 @@
-<resources>
-    <string name="app_name">Android_HW01</string>
-    <string name="text_no1">Здесь выводится текст один</string>
-    <string name="text_no2">Здесь выводится текст два</string>
-    <string name="text_on_button">Поменять местами</string>
-    <string name="text_on_button_no2">replace all</string>
-
-</resources>
