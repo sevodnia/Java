@@ -75,4 +75,13 @@
         android:layout_below="@+id/pushLinkButton"
         android:layout_centerHorizontal="true"
         android:src="@drawable/bg2" />
+
+
+
+    <TextView
+        android:id="@+id/stringFromBulidConfig"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_above="@+id/placeToLoadPicture"/>
 </RelativeLayout>

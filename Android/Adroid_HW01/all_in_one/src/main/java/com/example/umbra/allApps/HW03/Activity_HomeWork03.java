@@ -9,8 +9,10 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.umbra.allApps.BuildConfig;
 import com.example.umbra.allApps.R;
 import com.squareup.picasso.Picasso;
 
@@ -38,6 +40,10 @@ public class Activity_HomeWork03 extends Activity {
         placeToLoadPicture = (ImageView) findViewById(R.id.placeToLoadPicture);
         Button workButton = (Button) findViewById(R.id.pushLinkButton);
 
+        //вытаскиваем значение из BuildConfig
+        TextView bconfig = (TextView) findViewById(R.id.stringFromBulidConfig);
+        bconfig.setText(BuildConfig.API_ENDPOINT);
+
 
         workButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -61,9 +67,9 @@ public class Activity_HomeWork03 extends Activity {
                         //пытаемся загрузить картинку
                         Picasso.with(Activity_HomeWork03.this)
                                 .load(getText)
-                                //.placeholder(R.drawable.placeholder)
-                                //.error(R.drawable.placeholder)
                                 .into(placeToLoadPicture);
+
+
                     } catch (Exception e) {
                         Toast toast = Toast.makeText(Activity_HomeWork03.this, "Ошибка загрузки 1", Toast.LENGTH_SHORT);
                         toast.show();
