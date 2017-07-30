@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#c7c7c7"
+    android:background="@color/white"
     android:gravity="center_vertical|center_horizontal"
     android:padding="@dimen/button_login"
     android:orientation="vertical">
@@ -11,7 +11,7 @@
         android:id="@+id/userNameText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/classwork2_name"
+        android:hint="@string/name"
         android:inputType="textPersonName" />
 
     <EditText
@@ -25,6 +25,6 @@
         android:id="@+id/loginButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/classwork2_login" />
+        android:text="@string/login" />
 
 </LinearLayout>

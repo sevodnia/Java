@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.umbra.allApps">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -19,8 +21,10 @@
 
 
         <activity android:name="com.example.umbra.allApps.HW01.Activity_HomeWork01" />
-        <activity android:name="com.example.umbra.allApps.CW02.Activity_ClassWork02" />
+          <activity android:name="com.example.umbra.allApps.CW02.Activity_ClassWork02" />
+        <activity android:name="com.example.umbra.allApps.CW03.Activity_ClassWork03" />
         <activity android:name=".HW02.Activity_HomeWork02" />
+        <activity android:name=".HW03.Activity_HomeWork03" />
 
     </application>
 

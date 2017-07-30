@@ -23,14 +23,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/text_no1" />
+                android:text="@string/some_text_1" />
 
             <TextView
                 android:id="@+id/text_no2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="@string/text_no2" />
+                android:text="@string/some_text_2" />
         </LinearLayout>
 
         <!--Третий способ для обработки нажатия кнопики -->
@@ -39,12 +39,12 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="replaceText"
-            android:text="@string/text_on_button" />
+            android:text="@string/start" />
 
         <Button
             android:id="@+id/buttonReplaceAll"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/text_on_button_no2" />
+            android:text="@string/work" />
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>

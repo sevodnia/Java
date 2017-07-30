@@ -17,8 +17,27 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+/*
     productFlavors {
+        //делаем из одного проекта  - два апк
+        //а можем включить  и выключить отлов ошибок
+        //https://fabric.io/kits/android/crashlytics/install
+        free{
+            //бесплатная версия
+            versionCode 1
+            versionName "1.0-free"
+        }
+        pay{
+            //платная версия
+            versionCode 1
+            versionName "1.0-pay"
+        }
+
     }
+*/
+
+
 }
 
 dependencies {
@@ -29,4 +48,11 @@ dependencies {
     compile 'com.android.support:appcompat-v7:25.3.1'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
+//библиотека для загрузки картинок и файлов
+    compile 'com.squareup.picasso:picasso:2.5.2'
+//библиотека для слежение за утечкой памяти
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.1'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
+    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
+
 }
