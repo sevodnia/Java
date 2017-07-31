@@ -4,10 +4,12 @@ package com.example.umbra.allApps.main;
         import android.content.Intent;
         import android.os.Bundle;
         import android.support.annotation.Nullable;
+        import android.support.v4.content.ContextCompat;
         import android.view.View;
         import android.widget.Button;
 
         import com.example.umbra.allApps.CW03.Activity_ClassWork03;
+        import com.example.umbra.allApps.CW04.Activity_ClassWork04;
         import com.example.umbra.allApps.HW03.Activity_HomeWork03;
         import com.example.umbra.allApps.R;
         import com.example.umbra.allApps.CW02.Activity_ClassWork02;
@@ -89,5 +91,39 @@ public class MainActivity extends Activity {
 
 
 
+        //        лассная работа №4
+
+        Button cw4button  = (Button) findViewById(R.id.cw4button);
+        cw4button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Activity_ClassWork04.class);
+                //overridePendingTransition(R.anim...., R.anim);
+                startActivity(intent);
+            }
+        });
+
+
+        // проверка на разрешения с помощью класса ContextCompat
+
+
+
+
     }
+
+
+    //возврат на предыдущую активити  и эффект перехода
+    //есть вариант устновки перехда общую для всего приложения в манифесте
+
+
+//    @Override
+//    public void onBackPressed() {
+//        super.onBackPressed();
+//        //overridePendingTransition(R.anim...., R.anim);
+//
+//
+//    }
+
+
+
 }
