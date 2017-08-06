@@ -77,7 +77,76 @@
 
         <TableRow
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent">
+
+
+            <Button
+
+                android:id="@+id/dz4button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/home4"
+
+                />
+
+            <Button
+
+                android:id="@+id/cw5button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/class5"
+
+                />
+
+        </TableRow>
+
+        <TableRow>
+
+
+            <Button
+
+                android:id="@+id/dz5button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/home5"
+
+                />
+
+
+
+
+            <Button
+
+                android:id="@+id/cw6button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/class6"
+
+                />
+
+
+
+        </TableRow>
+
+        <TableRow>
+            <Button
+
+                android:id="@+id/dz6button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/home6"
+
+                />
+
+
+
+
+        </TableRow>
     </TableLayout>
 
 

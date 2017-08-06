@@ -4,11 +4,15 @@
     <string name="home2">Home work 2</string>
     <string name="home3">Home work 3</string>
     <string name="home4">Home work 4</string>
+    <string name="home5">Home work 5</string>
+    <string name="home6">Home work 6</string>
 
     <string name="class1">Class work 1</string>
     <string name="class2">Class work 2</string>
     <string name="class3">Class work 3</string>
     <string name="class4">Class work 4</string>
+    <string name="class5">Class work 5</string>
+    <string name="class6">Class work 6</string>
 
     <!--Общие данные-->
     <string name="app_name">Android Course in PVT</string>
