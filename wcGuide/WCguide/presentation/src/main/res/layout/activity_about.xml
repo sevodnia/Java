@@ -33,36 +33,42 @@
 
 
     <!-- Охуенное выдвижное меню-->
+
     <SlidingDrawer
         android:id="@+id/SlidingDrawer"
-        android:layout_width="wrap_content"
-        android:layout_height="350dp"
+        android:layout_width="300dp"
+        android:layout_height="250dp"
         android:content="@+id/contentLayout"
         android:handle="@+id/slideButton"
         android:orientation="vertical"
         android:padding="10dp"
-        android:rotation="180">
+        android:rotation="180"
+        android:layout_gravity="center_horizontal"
+        >
 
 
         <!--Handle Button-->
         <com.doschechko.matylionak.wcguide.graf.MenuButton
             android:id="@+id/slideButton"
-            android:layout_width="250dp"
-            android:layout_height="50dp"
-            android:rotation="-180" />
+            android:layout_width="200dp"
+            android:layout_height="40dp"
+            android:rotation="-180"
+            />
 
         <!-- Content Layout -->
         <TableLayout
             android:id="@+id/contentLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/specialWhite"
+            android:background="@drawable/menu_item"
             android:gravity="center"
             android:orientation="vertical"
             android:padding="10dp"
-            android:rotation="180">
+            android:rotation="180"
+            >
 
-            <TableRow>
+            <TableRow
+                android:layout_weight="1">
 
                 <LinearLayout
                     android:layout_margin="5dp"
@@ -73,7 +79,7 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="match_parent"
+                        android:layout_width="50dp"
                         android:layout_height="0dp"
                         android:layout_weight="3"
                         android:src="@drawable/zodiak"
@@ -99,7 +105,7 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="match_parent"
+                        android:layout_width="50dp"
                         android:layout_height="0dp"
                         android:layout_weight="3"
                         android:src="@drawable/brain"
@@ -119,7 +125,8 @@
 
             </TableRow>
 
-            <TableRow>
+            <TableRow
+                android:layout_weight="1">
 
                 <LinearLayout
                     android:layout_margin="5dp"
@@ -130,7 +137,7 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="match_parent"
+                        android:layout_width="50dp"
                         android:layout_height="0dp"
                         android:layout_weight="3"
                         android:src="@drawable/smile"
@@ -157,7 +164,7 @@
                     android:orientation="vertical">
 
                     <ImageView
-                        android:layout_width="match_parent"
+                        android:layout_width="50dp"
                         android:layout_height="0dp"
                         android:layout_weight="3"
                         android:src="@drawable/people"
@@ -177,6 +184,12 @@
             </TableRow>
         </TableLayout>
     </SlidingDrawer>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/we" />
 
 
 </LinearLayout>
