@@ -1,1 +1,1 @@
-include ':all_in_one'
+include ':presentation', ':domain'

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+
+    <data>
+
+        <import type="java.lang.String" />
+        <import type="com.example.umbra.allApps.CW09.ClassWork9ViewModel.STATE" />
+        <import type="android.view.View" />
+
+        <variable
+            name="viewModel"
+            type="com.example.umbra.allApps.CW09.ClassWork9ViewModel" />
+
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/special"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{viewModel.name}"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:visibility="@{viewModel.state == STATE.DATA ? View.VISIBLE : View.GONE}" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@{viewModel.surname}"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:visibility="@{viewModel.state == STATE.DATA ? View.VISIBLE : View.GONE}" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@{String.valueOf(viewModel.age)}"
+            android:textSize="20sp"
+            android:gravity="center"
+            android:visibility="@{viewModel.state == STATE.DATA ? View.VISIBLE : View.GONE}" />
+
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="@{viewModel.state == STATE.PROGRESS ? View.VISIBLE : View.GONE}" />
+
+    </LinearLayout>
+
+</layout>
