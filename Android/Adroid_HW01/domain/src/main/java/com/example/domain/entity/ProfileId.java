@@ -1,7 +1,7 @@
 package com.example.domain.entity;
 
 
-public class ProfileId {
+public class ProfileId  implements  DomainModel{
 
 private String id;
 

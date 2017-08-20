@@ -41,6 +41,7 @@
         <activity android:name="com.example.umbra.allApps.CW07.Activity_ClassWork07" />
         <activity android:name="com.example.umbra.allApps.CW08.Activity_ClassWork08" />
         <activity android:name="com.example.umbra.allApps.CW09.Activity_ClassWork09" />
+        <activity android:name="com.example.umbra.allApps.CW12.Activity_ClassWork12" />
         <activity android:name=".HW02.Activity_HomeWork02" />
         <activity android:name=".HW03.Activity_HomeWork03" />
         <activity android:name=".HW04.Activity_HomeWork04" />

@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
@@ -14,6 +15,7 @@ import com.example.umbra.allApps.CW06.Activity_ClassWork06;
 import com.example.umbra.allApps.CW07.Activity_ClassWork07;
 import com.example.umbra.allApps.CW08.Activity_ClassWork08;
 import com.example.umbra.allApps.CW09.Activity_ClassWork09;
+import com.example.umbra.allApps.CW12.Activity_ClassWork12;
 import com.example.umbra.allApps.HW03.Activity_HomeWork03;
 import com.example.umbra.allApps.HW04.Activity_HomeWork04;
 import com.example.umbra.allApps.HW05.Activity_HomeWork05;
@@ -25,19 +27,52 @@ import com.example.umbra.allApps.CW02.Activity_ClassWork02;
 import com.example.umbra.allApps.HW01.Activity_HomeWork01;
 import com.example.umbra.allApps.HW02.Activity_HomeWork02;
 
-/**
- * Created by Umbra on 26.07.17.
- */
+import io.reactivex.annotations.NonNull;
+import io.reactivex.disposables.Disposable;
+import io.reactivex.observers.DisposableObserver;
+import io.reactivex.subjects.BehaviorSubject;
+import io.reactivex.subjects.PublishSubject;
+import io.reactivex.subjects.ReplaySubject;
+
 
 public class MainActivity extends Activity {
 
+    public PublishSubject<String> publishSubject = PublishSubject.create();
+    public BehaviorSubject<String> behaviorSubject = BehaviorSubject.create();
+    public ReplaySubject<String> replaySubject = ReplaySubject.create();
+
+    Disposable disposable;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
         setContentView(R.layout.main_activity);
+
+        replaySubject.onNext("Один");
+        replaySubject.onNext("Два");
+        replaySubject.onNext("Три");
+        replaySubject.onNext("Четыре");
+        disposable = replaySubject.subscribeWith(new DisposableObserver<String>() {
+            @Override
+            public void onNext(@NonNull String s) {
+                Log.e("AAA", s);
+            }
+
+            @Override
+            public void onError(@NonNull Throwable e) {
+
+            }
+
+            @Override
+            public void onComplete() {
+
+            }
+        });
+        replaySubject.onNext("пять");
+        replaySubject.onNext("шесьб");
+        replaySubject.onNext("семь");
+
 
         //домашка №1
         Button dz1button = (Button) findViewById(R.id.dz1Button);
@@ -139,10 +174,6 @@ public class MainActivity extends Activity {
         });
 
 
-
-
-
-
         //       Классная работа №5
 
         Button cw5button = (Button) findViewById(R.id.cw5button);
@@ -158,7 +189,6 @@ public class MainActivity extends Activity {
         });
 
 
-
         //       Классная работа №6
 
         Button cw6button = (Button) findViewById(R.id.cw6button);
@@ -172,8 +202,6 @@ public class MainActivity extends Activity {
 
             }
         });
-
-
 
 
         //        домашняя работа №6
@@ -216,8 +244,6 @@ public class MainActivity extends Activity {
         });
 
 
-
-
         //       Классная работа №8
 
         Button cw8button = (Button) findViewById(R.id.cw8button);
@@ -233,8 +259,7 @@ public class MainActivity extends Activity {
         });
 
 
-
-        //       Классная работа №8
+        //       Классная работа №9
 
         Button cw9button = (Button) findViewById(R.id.cw9button);
         cw9button.setOnClickListener(new View.OnClickListener() {
@@ -259,7 +284,19 @@ public class MainActivity extends Activity {
         });
 
 
+        //       Классная работа №10
 
+        Button cw10button = (Button) findViewById(R.id.cw10button);
+        cw10button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, Activity_ClassWork12.class);
+                startActivity(intent);
+                overridePendingTransition(R.anim.transition, R.anim.transition_back);
+
+
+            }
+        });
 
 
         // проверка на разрешения с помощью класса ContextCompat
@@ -281,4 +318,13 @@ public class MainActivity extends Activity {
     }
 
 
+    @Override
+    protected void onDestroy() {
+        if (!disposable.isDisposed()) {
+            //отписываемся от получения уведомлений
+            disposable.dispose();
+        }
+
+        super.onDestroy();
+    }
 }

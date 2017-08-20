@@ -1,9 +1,17 @@
-package com.example.domain.entity;
+package com.doschechko.matylionak.data.entity;
 
 
-public class Profile {
+import com.google.gson.annotations.SerializedName;
+
+public class Profile implements DataModel {
+
+    @SerializedName("name")
     private String name;
+
+    @SerializedName("surname")
     private String surname;
+
+    @SerializedName("age")
     private int age;
 
     public String getName() {

@@ -210,6 +210,24 @@
                 />
 
         </TableRow>
+
+        <TableRow>
+
+
+            <Button
+
+                android:id="@+id/cw10button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/class10"
+
+                />
+
+
+
+
+        </TableRow>
     </TableLayout>
 
 
