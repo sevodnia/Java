@@ -8,6 +8,7 @@ import android.widget.Button;
 
 import com.doschechko.matylionak.wcguide.R;
 import com.doschechko.matylionak.wcguide.about.About;
+import com.doschechko.matylionak.wcguide.toolbar.ToolBarActivity;
 
 public class MainActivity extends Activity {
     Button startButton;
@@ -16,12 +17,14 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+
         startButton = (Button) findViewById(R.id.buttonFindWC);
         startButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                Intent intent = new Intent(MainActivity.this, About.class);
+                Intent intent = new Intent(MainActivity.this, ToolBarActivity.class);
                 MainActivity.this.startActivity(intent);
 
 

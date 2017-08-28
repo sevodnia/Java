@@ -13,7 +13,7 @@ import android.widget.Button;
 import com.doschechko.matylionak.wcguide.R;
 
 /**
- * Created by Umbra on 12.08.17.
+ * Custom menu
  */
 
 public class MenuButton extends View {

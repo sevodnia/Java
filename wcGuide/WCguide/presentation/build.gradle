@@ -17,6 +17,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    dataBinding{
+
+        enabled = true
+
+    }
+
+
 }
 
 dependencies {
@@ -28,4 +36,23 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     testCompile 'junit:junit:4.12'
     compile 'org.jetbrains:annotations-java5:15.0'
+//библиотека для загрузки картинок и файлов
+    compile 'com.squareup.picasso:picasso:2.5.2'
+//библиотека для слежение за утечкой памяти
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5.1'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
+    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.1'
+
+
+
+    //новые библиотеки
+    compile 'com.android.support:design:25.3.1'
+    compile 'com.android.support:support-v4:25.3.1'
+    //новые библы
+    annotationProcessor 'com.android.databinding:compiler:2.3.0'
+    //compile project(path:":domain")
+//rxjava
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    compile 'io.reactivex.rxjava2:rxjava:2.1.2'
+
 }

@@ -18,6 +18,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".about.About"/>
+        <activity android:name=".toolbar.ToolBarActivity"/>
     </application>
 
 </manifest>
