@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+<import type="android.view.View"/>
+        <variable
+            name="viewModel"
+            type="com.example.umbra.allApps.HW11.HomeWork11ItemActivityViewModel" />
+
+    </data>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <ImageView
+            android:scaleType="centerCrop"
+            android:id="@+id/mImage"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:src="@drawable/eva_green" />
+
+        <TextView
+            android:id="@+id/mName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@{viewModel.name}" />
+
+        <TextView
+            android:id="@+id/mSurname"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@{viewModel.surname}" />
+
+        <TextView
+            android:id="@+id/mDept"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@{viewModel.department}" />
+
+        <TextView
+            android:id="@+id/mProf"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@{viewModel.profession}" />
+
+        <TextView
+            android:id="@+id/mEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@{viewModel.email}" />
+
+        <TextView
+            android:id="@+id/mPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="@{viewModel.phone}"
+
+            />
+
+        <Button
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/changeButton"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:text="Редактировать контакт"
+          android:onClick="@{()->viewModel.onClickButton()}" />
+
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:weightSum="2"
+            android:layout_gravity="center_horizontal">
+
+
+
+
+        <Button
+        android:layout_gravity="center_horizontal"
+        android:id="@+id/phoneButton"
+        android:layout_width="0dp"
+            android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:text="Позвонить" />
+
+
+        <Button
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/mailButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="E-mail" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</layout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/special_bg"
+    android:orientation="vertical">
+
+
+    <EditText
+        android:id="@+id/putLink"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:ems="5"
+        android:hint="@string/link"
+        android:inputType="textPersonName" />
+
+    <ImageView
+
+        android:id="@+id/placeToLoadPicture"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_above="@id/putLink"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/bg1"
+
+        />
+
+
+    <RadioGroup
+        android:id="@+id/radio_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/putLink"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/radio_vodka"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Хочу водки!"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:id="@+id/radio_wiskey"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Хочу виски!"
+            android:onClick="onRadioButtonClicked"/>
+
+        <RadioButton
+            android:id="@+id/radio_pivo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Хочу пива!"
+            android:onClick="onRadioButtonClicked"/>
+    </RadioGroup>
+
+
+    <Button
+        android:id="@+id/pushLinkButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/radio_layout"
+        android:layout_centerHorizontal="true"
+        android:text="@string/work" />
+
+    <ImageView
+        android:id="@+id/logo_beer"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pushLinkButton"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/bg2" />
+
+
+
+    <TextView
+        android:id="@+id/stringFromBulidConfig"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_above="@+id/placeToLoadPicture"/>
+</RelativeLayout>

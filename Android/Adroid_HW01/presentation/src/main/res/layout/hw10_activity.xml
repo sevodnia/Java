@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+>
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.example.umbra.allApps.HW10.Activity_HomeWork10ViewModel" />
+
+
+    </data>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/text23"
+            android:layout_centerHorizontal="true"
+            android:text="СТАРТ!" />
+
+        <TextView
+            android:id="@+id/text23"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@{viewModel.data}"
+            android:textSize="120sp" />
+
+    </RelativeLayout>
+
+</layout>
