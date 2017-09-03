@@ -47,7 +47,7 @@ public class MenuButton extends View {
         paint.setColor(Color.WHITE);
         paint.setTextAlign(Paint.Align.CENTER);
         canvas.drawText("МЕНЮ", getWidth() / 2, getHeight() / 2, paint);
-        //canvas.drawText("МЕНЮ", getWidth()/3, getHeight()/3*2, paint);
+        //canvas.drawText("МЕНЮ", getWidth()/img_3, getHeight()/img_3*img_2, paint);
         paint.setStyle(Paint.Style.STROKE);
         paint.setStrokeWidth(8);
         canvas.drawLine(getWidth()/5,getHeight()-20, getWidth()/5*4,getHeight()-20, paint);

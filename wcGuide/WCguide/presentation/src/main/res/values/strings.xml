@@ -12,4 +12,30 @@
     <string name="citaty">Цитаты</string>
     <string name="anekdoty">Анекдоты</string>
     <string name="aboutUs">О нас</string>
+    <string name="lorem">
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam ac sapien vel metus pharetra lobortis
+        nec nec metus. In sagittis eleifend congue. Curabitur quis condimentum ligula. Mauris aliquet
+        viverra tellus, pharetra sagittis diam aliquet maximus. Phasellus tincidunt nisl at lacus feugiat,
+        eu bibendum mi tristique. Nullam malesuada mi et purus tincidunt mattis. Fusce vestibulum diam in
+        tortor scelerisque, a iaculis lectus tincidunt. Morbi posuere vulputate maximus. In id nulla condimentum,
+        maximus tellus at, varius arcu. Sed lobortis sagittis metus a efficitur.
+</string>
+
+    <string name="showMore">Показать ещё</string>
+
+
+    <string name="aries">Овен</string>
+    <string name="taurus">Телец</string>
+    <string name="gemini">Близнецы</string>
+    <string name="cancer">Рак</string>
+    <string name="leo">Лев</string>
+    <string name="virgo">Дева</string>
+    <string name="libra">Весы</string>
+    <string name="scorpio">Скорпион</string>
+    <string name="sagittarius">Стрелец</string>
+    <string name="carpicorn">Козирог</string>
+    <string name="aquarius">Водолей</string>
+    <string name="pisces">Рыбы</string>
+
 </resources>

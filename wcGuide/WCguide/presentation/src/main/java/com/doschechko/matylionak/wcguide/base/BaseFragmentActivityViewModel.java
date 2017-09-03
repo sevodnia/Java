@@ -4,7 +4,7 @@ package com.doschechko.matylionak.wcguide.base;
  * Base interface for all the View Models in MVP
  */
 
-public interface BaseActivityViewModel {
+public interface BaseFragmentActivityViewModel {
     void init();
     void release();
     void resume();
