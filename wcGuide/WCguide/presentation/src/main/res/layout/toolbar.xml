@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    >
 
     <data>
-        <variable
-            name="view"
-            type="android.view.View"/>
-        <variable
-            name="drawer"
-            type="android.widget.SlidingDrawer"/>
-        <variable
+
+         <variable
             name="viewModel"
             type="com.doschechko.matylionak.wcguide.toolbar.ToolBarFragmentActivityViewModel" />
     </data>
@@ -43,12 +39,11 @@
                 android:id="@+id/back_arrow"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:onClick="@{()->viewModel.onClickBack()}"
-                />
+                android:onClick="@{()->viewModel.onClickBack()}" />
 
         </RelativeLayout>
 
-        <!--СЮДА ВСТАВЛЯЮТСЯ ФРАГМЕНТЫ-->
+        <!--Fragment placeholder-->
 
         <FrameLayout
             android:id="@+id/container"
@@ -59,28 +54,28 @@
 
         </FrameLayout>
 
-        <!-- Охуенное выдвижное меню-->
+
+        <!-- MENU-->
 
         <SlidingDrawer
             android:id="@+id/SlidingDrawer"
-            android:layout_below="@+id/relativeLayout"
             android:layout_width="300dp"
             android:layout_height="250dp"
+            android:layout_below="@+id/relativeLayout"
             android:layout_centerHorizontal="true"
             android:layout_gravity="center_horizontal"
             android:content="@+id/contentLayout"
             android:handle="@+id/slideButton"
             android:orientation="vertical"
             android:padding="10dp"
-            android:rotation="180"
-            >
-
+            android:rotation="180">
 
             <!--Handle Button-->
             <com.doschechko.matylionak.wcguide.graf.MenuButton
                 android:id="@+id/slideButton"
                 android:layout_width="200dp"
                 android:layout_height="40dp"
+                android:elevation="8dp"
                 android:rotation="-180" />
 
             <!-- Content Layout -->
@@ -89,6 +84,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/menu_item"
+                android:elevation="8dp"
                 android:gravity="center"
                 android:orientation="vertical"
                 android:padding="10dp"
@@ -102,8 +98,8 @@
                         android:layout_margin="5dp"
                         android:layout_weight="1"
                         android:background="@drawable/menu_item"
-                        android:orientation="vertical"
-                        android:onClick="@{()->viewModel.onClickOpenHoroscope()}">
+                        android:onClick="@{()->viewModel.onClickOpenHoroscope()}"
+                        android:orientation="vertical">
 
                         <ImageView
                             android:layout_width="50dp"
@@ -129,9 +125,8 @@
                         android:layout_margin="5dp"
                         android:layout_weight="1"
                         android:background="@drawable/menu_item"
-                        android:orientation="vertical"
                         android:onClick="@{()->viewModel.onClickOpenQuote()}"
-                        >
+                        android:orientation="vertical">
 
                         <ImageView
                             android:layout_width="50dp"
@@ -151,12 +146,14 @@
                 </TableRow>
 
                 <TableRow android:layout_weight="1">
+
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_margin="5dp"
                         android:layout_weight="1"
                         android:background="@drawable/menu_item"
+                        android:onClick="@{()->viewModel.onClickOpenAnekdot()}"
                         android:orientation="vertical">
 
                         <ImageView
@@ -184,8 +181,8 @@
                         android:layout_margin="5dp"
                         android:layout_weight="1"
                         android:background="@drawable/menu_item"
-                        android:orientation="vertical"
-                        android:onClick="@{()->viewModel.onClickOpenAbout()}">
+                        android:onClick="@{()->viewModel.onClickOpenAbout()}"
+                        android:orientation="vertical">
 
                         <ImageView
                             android:layout_width="50dp"
@@ -200,8 +197,7 @@
                             android:layout_weight="1"
                             android:gravity="center"
                             android:text="@string/aboutUs"
-                            android:textColor="@color/specialTextColor"
-                            />
+                            android:textColor="@color/specialTextColor" />
 
 
                     </LinearLayout>
@@ -209,9 +205,6 @@
                 </TableRow>
             </TableLayout>
         </SlidingDrawer>
-
-
-
 
 
     </RelativeLayout>
