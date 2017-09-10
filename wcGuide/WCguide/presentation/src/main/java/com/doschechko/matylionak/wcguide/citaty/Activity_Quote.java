@@ -8,14 +8,13 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
+import android.widget.Toast;
 import com.doschechko.matylionak.wcguide.R;
 import com.doschechko.matylionak.wcguide.base.BaseFragment;
 import com.doschechko.matylionak.wcguide.databinding.ActivityQuoteBinding;
 
 
 public class Activity_Quote extends BaseFragment {
-
     public Activity_Quote() {
     }
 
@@ -23,18 +22,21 @@ public class Activity_Quote extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
+        Toast.makeText(getActivity(),Activity_Authors.AUTHOR_NAME, Toast.LENGTH_LONG).show();
+
         Activity_QuoteViewModel viewModel = new Activity_QuoteViewModel();
         this.viewModel = viewModel;
+        viewModel.setActivity(getActivity());
 
         ActivityQuoteBinding binding  = DataBindingUtil.inflate(
                 inflater, R.layout.activity_quote, container, false);
         View view = binding.getRoot();
-        //here data must be an instance of the class MarsDataProvider
+        //here data must be an instance of the class
         binding.setViewModel(viewModel);
         binding.recycleViewQuotes.setLayoutManager(new LinearLayoutManager(getActivity()));
-        binding.recycleViewQuotes.setAdapter(viewModel.adaptor);
+        binding.recycleViewQuotes.setAdapter(viewModel.getAdaptor());
 
-        Log.e("F", "Activity_Quote starts");
+        Log.e("AAAA", "Activity_Quote starts");
         return view;
 
     }
@@ -47,10 +49,6 @@ public class Activity_Quote extends BaseFragment {
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-//        Activity_QuoteViewModel viewModel = new Activity_QuoteViewModel();
-//        this.viewModel = viewModel;
-//        ActivityQuoteBinding binding = DataBindingUtil.setContentView(getActivity(), R.layout.activity_quote);
-//        binding.setViewModel(viewModel);
         super.onViewCreated(view, savedInstanceState);
 
 

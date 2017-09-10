@@ -1,6 +1,5 @@
 package com.doschechko.matylionak.domain.interaction;
 
-
 import com.doschechko.matylionak.data.entity.QuoteData;
 import com.doschechko.matylionak.data.net.Rest.RestService;
 import com.doschechko.matylionak.domain.entity.Quote;
@@ -13,14 +12,17 @@ import io.reactivex.Observable;
 import io.reactivex.annotations.NonNull;
 import io.reactivex.functions.Function;
 
-public class UseCaseGetQuotes extends UseCase<List<QuoteData>, List<Quote>> {
-    /**
-     * Возвращает нам весь Observable Quote полученных из базы данных и выполненный в другом потоке
-     */
+/**
+ * Возвращает коллекцию с пагинацией. на странице по 10 цитат.
+ */
+
+public class UseCaseGetQuotesWithNumber extends UseCase<List<QuoteData>, List<Quote>> {
+    private static int index = 0;
+
 
     @Override
     protected Observable<List<Quote>> builtUseCase(List<QuoteData> quoteDatas) {
-        return RestService.getInstance().getQuotes()
+        return RestService.getInstance().getQuotesWithNumber(String.valueOf(index))
                 .map(new Function<List<QuoteData>, List<Quote>>() {
                     @Override
                     public List<Quote> apply(@NonNull List<QuoteData> quoteDatas) throws Exception {
@@ -30,10 +32,10 @@ public class UseCaseGetQuotes extends UseCase<List<QuoteData>, List<Quote>> {
                             Quote quote = new Quote(i.getQuote_body(), i.getQuote_author(), i.getQuote_author());
                             list.add(quote);
                         }
+                        index =index+5;
                         return list;
                     }
                 });
+
     }
-
-
 }

@@ -21,9 +21,7 @@ public class MyAdaptor extends RecyclerView.Adapter<MyHolder> {
 
     @Override
     public MyHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-
         ItemQuoteBinding binding = ItemQuoteBinding.inflate(inflater, parent, false);
         return new MyHolder(binding.getRoot());
     }

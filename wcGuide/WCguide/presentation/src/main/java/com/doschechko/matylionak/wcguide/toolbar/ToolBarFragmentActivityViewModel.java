@@ -11,6 +11,7 @@ import com.doschechko.matylionak.wcguide.R;
 import com.doschechko.matylionak.wcguide.about.AboutFragment;
 import com.doschechko.matylionak.wcguide.anekdot.Activity_Anekdot;
 import com.doschechko.matylionak.wcguide.base.BaseFragmentActivityViewModel;
+import com.doschechko.matylionak.wcguide.citaty.Activity_Authors;
 import com.doschechko.matylionak.wcguide.citaty.Activity_Quote;
 import com.doschechko.matylionak.wcguide.horoscope.Activity_Horoscope;
 import java.lang.annotation.Annotation;
@@ -73,7 +74,8 @@ public class ToolBarFragmentActivityViewModel implements BaseFragmentActivityVie
     public void onClickOpenQuote() {
         //it starts an Activity_Quote
         Toast.makeText(activity, "Цитаты", Toast.LENGTH_SHORT).show();
-        showFragment(fragmentManager, new Activity_Quote(), false);
+        showFragment(fragmentManager, new Activity_Authors(), false);
+      //  showFragment(fragmentManager, new Activity_Quote(), false);
         slidingDrawer.animateClose();
     }
 

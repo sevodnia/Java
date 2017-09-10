@@ -6,7 +6,16 @@ public class Quote {
 
     String body;
     String author;
+    String objectId;
 
+    public Quote() {
+    }
+
+    public Quote(String body, String author, String objectId) {
+        this.body = body;
+        this.author = author;
+        this.objectId = objectId;
+    }
 
     public String getBody() {
         return body;
@@ -24,17 +33,11 @@ public class Quote {
         this.author = author;
     }
 
-    public Quote(String body, String author) {
-        this.body = body;
-        this.author = author;
+    public String getObjectId() {
+        return objectId;
     }
 
-
-    @Override
-    public String toString() {
-        return "Quote{" +
-                "body='" + body + '\'' +
-                ", author='" + author + '\'' +
-                '}';
+    public void setObjectId(String objectId) {
+        this.objectId = objectId;
     }
 }
